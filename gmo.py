@@ -108,14 +108,19 @@ class StackBot:
                 latest_trade_day += _
             return latest_trade_day
 
-    def buy_order(self, symbol, size, price=None):
+    def order(self, symbol, side, size, price=None, time_in_force="FAK"):
         path = "/v1/order"
         params = {
             "symbol": symbol,
-            "side": "BUY",
-            "timeInForce": "FAK",
+            "timeInForce": time_in_force,
             "size": str(size),
         }
+        if side == "BUY":
+            params["side"] = "BUY"
+        elif side == "SELL":
+            params["side"] = "SELL"
+        else:
+            raise ValueError("side must be BUY or SELL")
         if price is None:
             params["executionType"] = "MARKET"
         else:
