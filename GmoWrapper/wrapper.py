@@ -7,10 +7,10 @@ import requests
 
 from rich import print
 
-from load_api import load_config
+from GmoWrapper.load_api import load_config
 
 
-class StackBot:
+class GmoWrapper:
     def __init__(self, api_file_name="gmo_api.json"):
         self._public_endpoint = "https://api.coin.z.com/public"
         self._private_endpoint = "https://api.coin.z.com/private"
