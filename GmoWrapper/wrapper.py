@@ -82,11 +82,21 @@ class GmoWrapper:
         path = "/v1/ticker"
         params = {"symbol": symbol}
         result = self._requests(self._public_endpoint + path, "GET", params)
-        if not result:
+        if result:
             result = result.get("data", [{}])[0]
+            data = {
+                "ask": float(result["ask"]),
+                "bid": float(result["bid"]),
+                "high": float(result["high"]),
+                "last": float(result["last"]),
+                "low": float(result["low"]),
+                "symbol": result["symbol"],
+                "timestamp": result["timestamp"], # todo: need to change to unixtime
+                "volume": float(result["volume"]),
+            }
+
         else:
-            result = {}
-        return result
+            return {}
 
     def get_available_account(self):
         path = "/v1/account/margin"

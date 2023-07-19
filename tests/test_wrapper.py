@@ -1,15 +1,19 @@
 from rich import print
 
 from GmoWrapper.wrapper import GmoWrapper
-from GmoWrapper.constants import PUBLIC_ENDPOINT, PRIVATE_ENDPOINT
+from GmoWrapper.constants import (
+PUBLIC_ENDPOINT,
+PRIVATE_ENDPOINT,
+SYMBOL_BTC,
+)
 
 gmo = GmoWrapper()
 
-res = gmo.is_exchange_status()
-print(res)
-
-# res = gmo.get_ticker()
+# res = gmo.is_exchange_status()
 # print(res)
+
+res = gmo.get_ticker(symbol=SYMBOL_BTC)
+print(res)
 
 # res =gmt.get_available_account()
 # print(res)
