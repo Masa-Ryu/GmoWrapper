@@ -90,7 +90,7 @@ class GmoWrapper:
         return unix_time
 
     @staticmethod
-    def convert_to_JST(unixtime_int) -> str:
+    def convert_to_jst(unixtime_int) -> str:
         """
         datetime: unixtime
         """
