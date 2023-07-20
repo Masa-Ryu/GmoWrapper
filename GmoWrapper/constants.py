@@ -26,27 +26,27 @@ SYMBOL = {
 }
 MIN_ORDER_QUANTITIES = {
     "BTC": 0.0001,
-    "ETH": 0.001,
-    "BCH": 0.002,
-    "LTC": 0.01,
-    "XRP": 2,
+    "ETH": 0.01,
+    "BCH": 0.01,
+    "LTC": 0.1,
+    "XRP": 1,
     "XEM": 1,
-    "XLM": 5,
-    "BAT": 2,
-    "OMG": 0.3,
-    "XTZ": 0.5,
+    "XLM": 1,
+    "BAT": 1,
+    "OMG": 0.1,
+    "XTZ": 0.1,
     "QTUM": 0.1,
     "ENJ": 1,
     "DOT": 0.1,
-    "ATOM": 1,  # Please confirm
-    "MKR": 0.01,  # Please confirm
-    "DAI": 1,  # Please confirm
-    "XYM": 1,  # Please confirm
-    "MONA": 1,  # Please confirm
-    "FCR": 1,  # Please confirm
-    "ADA": 1,  # Please confirm
-    "LINK": 1,  # Please confirm
-    "ASTR": 1,  # Please confirm
+    "ATOM": 0.01,
+    "MKR": 0.001,
+    "DAI": 1,
+    "XYM": 1,
+    "MONA": 1,
+    "FCR": 10,
+    "ADA": 1,
+    "LINK": 0.1,
+    "ASTR": 10,
 }
 
 SIDE = {
