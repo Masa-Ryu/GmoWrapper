@@ -148,7 +148,7 @@ class GmoWrapper:
                 data.append(
                     {
                         "timestamp": timestamp,
-                        "jst": self.convert_to_JST(timestamp),
+                        "jst": self.convert_to_jst(timestamp),
                         "open": float(kline["open"]),
                         "high": float(kline["high"]),
                         "low": float(kline["low"]),
@@ -266,7 +266,7 @@ class GmoWrapper:
             data = {
                 "order_id": None,
                 "timestamp": self.convert_to_unixtime(result["responsetime"]),
-                "errer_code": result["messages"][0]["message_code"],
-                "errer_message": result["messages"][0]["message_string"],
+                "error_code": result["messages"][0]["message_code"],
+                "error_message": result["messages"][0]["message_string"],
             }
         return data
